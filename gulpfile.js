@@ -4,18 +4,10 @@ var gulp   = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 var paths = {
-  lint: ['./gulpfile.js', './lib/**/*.js'],
   watch: ['./gulpfile.js', './lib/**', './test/**/*.js', '!test/{temp,temp/**}'],
   tests: ['./test/**/*.js', '!test/{temp,temp/**}'],
   source: ['./lib/*.js']
 };
-
-gulp.task('lint', function () {
-  return gulp.src(paths.lint)
-    .pipe(plugins.jshint('.jshintrc'))
-    .pipe(plugins.jscs())
-    .pipe(plugins.jshint.reporter('jshint-stylish'));
-});
 
 gulp.task('istanbul', function (cb) {
   gulp.src(paths.source)
@@ -44,7 +36,7 @@ gulp.task('watch', ['test'], function () {
   gulp.watch(paths.watch, ['test']);
 });
 
-gulp.task('test', ['lint', 'istanbul']);
+gulp.task('test', ['istanbul']);
 
 gulp.task('release', ['bump']);
 
