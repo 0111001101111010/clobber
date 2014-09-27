@@ -40,5 +40,7 @@
     "test": "gulp test",
     "start": "./lib/clobber.js ./lib/test.js"
   },
-  "bin" : { "clobber" : "./lib/clobber.js" }
+  "bin": {
+    "clobber": "./lib/clobber.js"
+  }
 }
