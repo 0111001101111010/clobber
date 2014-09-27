@@ -1,7 +1,7 @@
 {
   "name": "clobber",
   "description": "cram dependencies into package json if they do not exist",
-  "version": "0.0.1",
+  "version": "0.0.21",
   "homepage": "http://github.com/stanzheng/clobber",
   "bugs": "https://github.com/stanzheng/clobber/issues",
   "license": "MIT",
@@ -39,5 +39,6 @@
     "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test": "gulp test",
     "start": "./lib/clobber.js ./lib/test.js"
-  }
+  },
+  "bin" : { "clobber" : "./lib/clobber.js" }
 }
