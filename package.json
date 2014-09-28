@@ -1,7 +1,7 @@
 {
   "name": "clobber",
   "description": "cram dependencies into package json if they do not exist",
-  "version": "0.0.21",
+  "version": "0.3.0",
   "homepage": "http://github.com/stanzheng/clobber",
   "bugs": "https://github.com/stanzheng/clobber/issues",
   "license": "MIT",
